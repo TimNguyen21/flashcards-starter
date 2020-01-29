@@ -1,17 +1,29 @@
 class Round {
-  constructor(deck, turn, incorrectGuess) {
+  constructor(deck) {
     this.deck = deck;
-    this.turns = turn;
-    this.incorrectGuesses = incorrectGuess || [];
-
+    this.turns = 0;
+    this.index = 0;
+    this.incorrectGuesses = [];
   }
 
   returnCurrentCard() {
 
   }
 
-  calculatePercentCorrect() {
+  currentCard() {
+    return this.deck[this.index];
+  }
 
+  takeTurn(currentTurn) {
+    // this.turn++;
+    // this.index++;
+    var isCorrect = currentTurn.evaluateGuess();
+    if (isCorrect === false) {
+      this.incorrectGuesses.push(this.deck[this.index].id)
+      return currentTurn.giveFeedback();
+    } else {
+      return currentTurn.giveFeedback();
+    }
   }
 
   endRound() {
