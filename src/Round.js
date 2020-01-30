@@ -7,9 +7,10 @@ class Round {
 
   returnCurrentCard() {
     if (this.turns === this.deck.length) {
-      return this.endRound()
-    } else {
-      this.turns++;
+      return this.endRound();
+    }
+    else if (this.turns < this.deck.length) {
+      return this.turns++;
     }
   }
 
@@ -23,16 +24,15 @@ class Round {
       // var currentId = this.deck[this.turns].id;
       this.incorrectGuesses.push(this.deck[this.turns].id);
       return currentTurn.giveFeedback();
-    } else {
+    } else if (isCorrect === true) {
       return currentTurn.giveFeedback();
     }
   }
 
-
   endRound() {
     return `** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`
   }
-  
+
   calculatePercentCorrect() {
     var percentageCorrect = Math.round(((this.deck.length - this.incorrectGuesses.length)/this.deck.length) * 100)
     return percentageCorrect;
