@@ -55,22 +55,15 @@ describe('Round', function() {
     const round = new Round(deck.saveDecks);
     const turn = new Turn('sea otter', card1);
 
-    round.currentCard();
-    round.takeTurn(turn);
-
-    expect(round.takeTurn(turn)).to.equal('correct!');
+    expect(round.takeTurn('sea otter')).to.equal('correct!');
   });
 
   it('should have a current guess to be incorrect!', function() {
     const card1 = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
     const deck = new Deck([card1]);
     const round = new Round(deck.saveDecks);
-    const turn1 = new Turn('pug', card1);
 
-    round.currentCard();
-    round.takeTurn(turn1);
-
-    expect(round.takeTurn(turn1)).to.equal('incorrect!');
+    expect(round.takeTurn('pug')).to.equal('incorrect!');
   });
 
   it('should have a correct results based on user guess', function() {
@@ -80,24 +73,9 @@ describe('Round', function() {
     const deck = new Deck([card1, card2, card3]);
     const round = new Round(deck.saveDecks);
 
-
-    const turn1 = new Turn('sea otter', round.currentCard());
-
-    round.takeTurn(turn1);
-    round.returnCurrentCard();
-
-    const turn2 = new Turn('spleen', round.currentCard());
-
-    round.takeTurn(turn2);
-    round.returnCurrentCard();
-
-    const turn3 = new Turn('playing with bubble wrap', round.currentCard());
-
-    round.takeTurn(turn3);
-
-    expect(round.takeTurn(turn1)).to.equal('correct!');
-    expect(round.takeTurn(turn2)).to.equal('incorrect!');
-    expect(round.takeTurn(turn3)).to.equal('correct!');
+    expect(round.takeTurn('sea otter')).to.equal('correct!');
+    expect(round.takeTurn('spleen')).to.equal('incorrect!');
+    expect(round.takeTurn('playing with bubble wrap')).to.equal('correct!');
   });
 
   it('should return a array of incorrect answers', function() {
@@ -107,20 +85,9 @@ describe('Round', function() {
     const deck = new Deck([card1, card2, card3]);
     const round = new Round(deck.saveDecks);
 
-    const turn1 = new Turn('sea otter', round.currentCard());
-
-    round.takeTurn(turn1);
-    round.returnCurrentCard();
-
-    const turn2 = new Turn('spleen', round.currentCard());
-
-    round.takeTurn(turn2);
-    round.returnCurrentCard();
-
-    const turn3 = new Turn('playing with bubble wrap', round.currentCard());
-
-    round.takeTurn(turn3);
-    round.returnCurrentCard();
+    round.takeTurn('sea otter');
+    round.takeTurn('spleen');
+    round.takeTurn('playing with bubble wrap');
 
     expect(round.incorrectGuesses).to.deep.equal([14]);
   });
@@ -132,21 +99,9 @@ describe('Round', function() {
     const deck = new Deck([card1, card2, card3]);
     const round = new Round(deck.saveDecks);
 
-
-    const turn1 = new Turn('sea otter', round.currentCard());
-
-    round.takeTurn(turn1);
-    round.returnCurrentCard();
-
-    const turn2 = new Turn('spleen', round.currentCard());
-
-    round.takeTurn(turn2);
-    round.returnCurrentCard();
-
-    const turn3 = new Turn('playing with bubble wrap', round.currentCard());
-
-    round.takeTurn(turn3);
-    round.returnCurrentCard();
+    round.takeTurn('sea otter');
+    round.takeTurn('spleen');
+    round.takeTurn('playing with bubble wrap');
 
     expect(round.endRound()).to.equal('** Round over! ** You answered 67% of the questions correctly!');
   });
