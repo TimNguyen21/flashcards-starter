@@ -1,6 +1,6 @@
 class Deck {
   constructor(deck) {
-    this.saveDecks = deck || [];
+    this.saveDecks = deck;
   }
 
   countCards() {
