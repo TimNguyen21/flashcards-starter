@@ -30,7 +30,6 @@ class Round {
     var percentageCorrect = Math.round(((this.deck.length - this.incorrectGuesses.length)/this.deck.length) * 100)
     return percentageCorrect;
   }
-
 }
 
 module.exports = Round

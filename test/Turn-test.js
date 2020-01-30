@@ -8,11 +8,13 @@ describe('Turn', function() {
 
   it('should be a function', function() {
     const turn = new Turn();
+
     expect(Turn).to.be.a('function');
   });
 
   it('should be an instance of Turn', function() {
     const turn = new Turn();
+
     expect(turn).to.be.an.instanceof(Turn);
   });
 
@@ -47,7 +49,7 @@ describe('Turn', function() {
   it('should return false for incorrect answer', function() {
     const card = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
     const turn = new Turn('pug', card);
-    
+
     expect(turn.evaluateGuess()).to.equal(false);
   });
 
@@ -59,4 +61,5 @@ describe('Turn', function() {
 
     expect(turn.giveFeedback()).to.equal('incorrect!');
   });
+  
 });
