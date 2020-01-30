@@ -44,9 +44,9 @@ describe('Round', function() {
     const deck = new Deck([card1]);
     const round = new Round(deck.saveDecks);
 
-    round.currentCard();
+    round.returnCurrentCard();
 
-    expect(round.currentCard()).to.deep.equal({id: 1, question: 'What is Robbie\'s favorite animal', answers: ['sea otter', 'pug', 'capybara'], correctAnswer: 'sea otter'});
+    expect(round.returnCurrentCard()).to.deep.equal({id: 1, question: 'What is Robbie\'s favorite animal', answers: ['sea otter', 'pug', 'capybara'], correctAnswer: 'sea otter'});
   });
 
   it('should have a current guess to be correct!', function() {

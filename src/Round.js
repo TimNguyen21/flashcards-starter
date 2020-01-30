@@ -7,12 +7,12 @@ class Round {
     this.incorrectGuesses = [];
   }
 
-  currentCard() {
+  returnCurrentCard() {
     return this.deck[this.turns];
   }
 
   takeTurn(answer) {
-    var turn = new Turn(answer, this.currentCard());
+    var turn = new Turn(answer, this.returnCurrentCard());
     var isCorrect = turn.evaluateGuess();
     if (isCorrect === false) {
       this.incorrectGuesses.push(this.deck[this.turns].id);
