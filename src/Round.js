@@ -6,12 +6,7 @@ class Round {
   }
 
   returnCurrentCard() {
-    if (this.turns === this.deck.length) {
-      return this.endRound();
-    }
-    else if (this.turns < this.deck.length) {
-      return this.turns++;
-    }
+    return this.turns++;
   }
 
   currentCard() {
@@ -21,7 +16,6 @@ class Round {
   takeTurn(currentTurn) {
     var isCorrect = currentTurn.evaluateGuess();
     if (isCorrect === false) {
-      // var currentId = this.deck[this.turns].id;
       this.incorrectGuesses.push(this.deck[this.turns].id);
       return currentTurn.giveFeedback();
     } else if (isCorrect === true) {
