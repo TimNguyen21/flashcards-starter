@@ -1,8 +1,12 @@
 # FlashCards
 
-## Setup
+## What is FlashCards
 
-### Fork This Repo
+FlashCards is a game where a user can answer multiple choice questions in the Terminal.  After answering all of the questions, at the end of the game, it will show your percentage result of how many questions you answer correctly.
+
+### Setup
+
+#### Fork This Repo
 
 On the top right corner of this page, click the **Fork** button.
 
@@ -21,7 +25,7 @@ npm install
 ```
 
 
-## How to start the Game
+### How to start the Game
 
 In the terminal enter and run the following code:
 
@@ -29,6 +33,6 @@ In the terminal enter and run the following code:
 node index.js
 ```
 
-When the game is functioning appropriately, you will be prompted for each question, have the opportunity to select an answer, and will be given feedback. You will be able to play through the entire deck of cards:
+When the game is functioning appropriately, you will be prompted for each question, have the opportunity to select an answer, and will be given feedback. You will be able to play through the entire deck of cards.  At the end of the game, it will give you a result of how many questions were guessed correctly.
 
 ![flash cards example gif](https://media.giphy.com/media/JQ3t0sNXPWs0MF11Er/giphy.gif)
