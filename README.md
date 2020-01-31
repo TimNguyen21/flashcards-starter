@@ -1,10 +1,12 @@
 # FlashCards
 
-## Fork This Repo
+## Setup
+
+### Fork This Repo
 
 On the top right corner of this page, click the **Fork** button.
 
-## Setup
+---
 
 Clone down the forked repo (from your GitHub). Since you don't want to name your project "flashcards-starter", you can use an optional argument when you run `git clone` (you replace the `[...]` with the terminal command arguments):
 
@@ -29,4 +31,4 @@ node index.js
 
 When the game is functioning appropriately, you will be prompted for each question, have the opportunity to select an answer, and will be given feedback. You will be able to play through the entire deck of cards:
 
-![flash cards example gif](https://media.giphy.com/media/1zkb1q58eTiTH6D7wc/giphy.gif)
+![flash cards example gif](https://media.giphy.com/media/JQ3t0sNXPWs0MF11Er/giphy.gif)
