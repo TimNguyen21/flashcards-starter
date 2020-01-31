@@ -1,4 +1,4 @@
-# FlashCards Starter Kit
+# FlashCards
 
 ## Fork This Repo
 
@@ -18,24 +18,11 @@ Once you have cloned the repo, change into the directory and install the library
 npm install
 ```
 
-To verify that it is setup correctly, run `npm test` in your terminal. You should have 5 pending tests in your `Card` test file that show up.
-
 Running `node index.js` from the root of your project should result in the following message being displayed in your terminal: 
 
 ```bash
 Node server running on port 3000
 ```
-
-*Note that you will not need to you run your server until you are instantiating your `Game` class in Iteration 3. Prior to that, you should be using TDD to drive your code. You should check the functionality of your application by running your tests via `npm test`.*
-
-
-## Where to Add Your Code
-
-### JavaScript
-
-**Create all of your feature code files in the `src` directory.**
-
-We will be using the `module.exports` and `require` syntax to share code across files.
 
 ## How to View Your Code in Action
 
